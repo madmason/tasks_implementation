@@ -1,4 +1,4 @@
-<app-book-card
+<app-book-card *ngFor="let book of books"
     (detailClick)="goToBookDetails($event)"
-    [content]="book" >
+    [content]=book >
 </app-book-card>
