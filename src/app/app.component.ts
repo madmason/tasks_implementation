@@ -13,4 +13,7 @@ export class AppComponent {
     author: "Terry Pratchett",
     description: "A sweeper saves time on the Discworld"
   };
+  goToBookDetails(book: Book) {
+    console.log(book);
+  }
 }

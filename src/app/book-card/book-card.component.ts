@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Book } from '../book';
 import { BookNa } from '../book-na';
 
@@ -13,11 +13,13 @@ export class BookCardComponent implements OnInit {
 
   @Input() content: Book = new BookNa;
 
+  @Output() detailClick = new EventEmitter<Book>();
+
   ngOnInit(): void {
   }
   handleDetailClick(click: MouseEvent): void {
     click.preventDefault();
-    console.log(click);
+    this.detailClick.emit(this.content);
   }
 
 }
