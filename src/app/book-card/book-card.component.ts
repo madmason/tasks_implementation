@@ -12,4 +12,8 @@ export class BookCardComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  customStyle = {
+    color: 'turquoise'
+  };
+
 }
