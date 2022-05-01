@@ -1,4 +1,4 @@
-import { Component,Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-book-card',
@@ -13,7 +13,11 @@ export class BookCardComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  handleDetailClick(click: MouseEvent): void {
+    click.preventDefault();
+    console.log(click);
+  }
+  
   customStyle = {
     color: 'turquoise'
   };
