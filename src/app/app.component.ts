@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Book } from './book';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'tasks_implementation';
-  book = {
+  book: Book= {
     title: "Thief of Time",
     author: "Terry Pratchett",
     description: "A sweeper saves time on the Discworld"

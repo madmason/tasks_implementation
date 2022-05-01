@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Book } from '../book';
+import { BookNa } from '../book-na';
 
 @Component({
   selector: 'app-book-card',
@@ -9,7 +11,7 @@ export class BookCardComponent implements OnInit {
 
   constructor() { }
 
-  @Input() content: any;
+  @Input() content: Book = new BookNa;
 
   ngOnInit(): void {
   }
@@ -17,9 +19,5 @@ export class BookCardComponent implements OnInit {
     click.preventDefault();
     console.log(click);
   }
-  
-  customStyle = {
-    color: 'turquoise'
-  };
 
 }
